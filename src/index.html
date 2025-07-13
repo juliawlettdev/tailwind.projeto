@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <nav class="relative w-full flex justify-between items-center bg-white px-8 py-2 font-Montserrat shadow-black2xs z-40">
+    <nav class="relative w-[fill-available] flex justify-between items-center bg-white px-8 py-2 shadow-black2xs z-40">
         <img src="../img/logo.svg" class="shrink-0 w-30 h-fit bg-transparent" alt="">
         <ul class="flex justify-center gap-5 font-medium">
             <li><a href="#home">Home</a></li>
@@ -19,8 +19,16 @@
         </ul>
     </nav>
 
-    <div class="w-full bg-[url(../img/background-home.jpg)] bg-cover bg-center h-90 flex justify-center items-center">
-        <p class="text-5xl bg-white font-bold">Marketing Digital</p>
+    <div class="w-[fill-available] bg-[url(../img/background-home.jpg)] bg-cover bg-center h-90 flex justify-center items-center flex-col gap-4">
+        <p class="text-5xl text-gray-950 font-bold">Marketing Digital</p>
+        <button class=" bg-white py-1 px-4 rounded-lg hover:bg-gray-500 hover:text-white hover:scale-110 duration-150 cursor-pointer hover:animate-floatUp">Ver mais sobre a agencia</button>
+    </div>
+
+    <div class="flex bg-blue-200 w-[fill-available] h-60 m-5 p-5 justify-between gap-5 items-center rounded-md">
+        <span class="h-15 bg-amber-50 flex-1">1</span>
+        <span class="h-15 bg-cyan-50 flex-1">2</span>
+        <span class="h-15 bg-amber-50 flex-1">3</span>
+        <span class="h-15 bg-cyan-50 flex-1">4 </span>
     </div>
 </body>
 
