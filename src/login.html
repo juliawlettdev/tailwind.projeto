@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Marktplace</title>
+    <link rel="stylesheet" href="../style/output.css">
+</head>
+
+<body class="max-sm:bg-white bg-slate-100">
+    <main class="flex w-[fill-available] min-h-screen">
+        <section class="flex-1 flex items-center center justify-center flex-col gap-10">
+            <div class="flex flex-col items-center justify-center gap-1 bg">
+                <img src="./assets/img/login/user.png" alt="Foto de perfil do usuario"
+                    class="max-w-1/4 sm:max-w-1/4">
+                <p class="font-bold uppercase text-2xl text-neutral-800">Login</p>
+            </div>
+
+            <form action="#" class="flex flex-col gap-4 w-4/5">
+                <div class="flex flex-col gap-2">
+                    <input
+                        class="bg-white w-full py-2 px-4 text-md outline-none
+                        border-0 border-b-2 border-b-neutral-500 
+                        focus:border-b-blue-500 placeholder:font-normal placeholder:text-neutral-600 font-medium text-neutral-900"
+                        type="text" placeholder="Digite seu email...">
+
+                    <input
+                        class="bg-white w-full py-2 px-4 text-md outline-none
+                        border-0 border-b-2 border-b-neutral-500 
+                        focus:border-b-blue-500 placeholder:font-normal placeholder:text-neutral-600 font-medium text-neutral-900"
+                        type="text" placeholder="**********">
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <input type="radio" name="tipo" class="accent-blue-500">
+                        <label for="opcao1" class="text-sm text-gray-700 font-medium">Lembrar senha</label>
+                    </div>
+                    <a class="text-sm font-medium text-blue-500 hover:text-cyan-950 duration-150 cursor-pointer">Esqueceu sua senha?</a>
+                </div>
+
+                <button class="bg-blue-500 hover:bg-cyan-950 duration-150 cursor-pointer w-full text-white rounded-lg py-1.5 font-medium">Acessar</button>
+
+                <p class="text-center">Não possui uma conta? <a class="text-blue-500 hover:text-cyan-950 duration-150 cursor-pointer font-bold">Criar uma conta</a></p>
+            </form>
+        </section>
+        <section class="hidden flex-1 bg-blue-500 sm:flex items-center flex-col justify-center gap-10">
+            <p class="text-3xl text-white text-center">Domine as <b>tecnologias mais <br> buscadas</b> pelo mercado!</p>
+            <img class="max-h-1/2 max-w-1/2" src="./assets/img/login/techs.png" alt="" srcset="">
+        </section>
+    </main>
+</body>
+
+</html>
