@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 @theme {
-    --font-Montserrat: "Montserrat", "serif";
+    --font-Montserrat: "Montserrat", sans-serif;
+    --font-Inter: "Inter", sans-serif;
     --shadow-black2xs:  0px 15px 15px 0px rgba(35,35,35,0.16);
     --animate-floatUp: floatUp 1s ease-in-out infinite;
+    --bg-uberBg: url('/src/assets/img/uber/bguber.png');
 
     @keyframes floatUp {
         0%{
@@ -19,4 +21,20 @@
             transform:translateY(0px)
         }
     }
+}
+
+@layer utilities {
+  .bg-uber {
+    background-image: var(--bg-uberBg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: 768px) {
+    .md\:bg-uber {
+      background-image: var(--bg-uberBg);
+      background-size: cover;
+      background-position: center;
+    }
+  }
 }
