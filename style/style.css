@@ -9,6 +9,7 @@
     --shadow-black2xs:  0px 15px 15px 0px rgba(35,35,35,0.16);
     --animate-floatUp: floatUp 1s ease-in-out infinite;
     --bg-uberBg: url('/src/assets/img/uber/bguber.png');
+    --bg-cityBg: url('/src/assets/img/uber/bg-city.png');
 
     @keyframes floatUp {
         0%{
@@ -30,8 +31,19 @@
     background-position: center;
   }
 
-  @media (min-width: 768px) {
-    .md\:bg-uber {
+  .bg-city {
+    background-image: var(--bg-cityBg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:bg-uber {
+      background-image: var(--bg-uberBg);
+      background-size: 100% 100%;
+      background-position: center;
+    }
+    .md\:bg-city {
       background-image: var(--bg-uberBg);
       background-size: cover;
       background-position: center;
