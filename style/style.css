@@ -36,6 +36,11 @@
     background-size: cover;
     background-position: center;
   }
+  
+  .h-fill-available {
+    height: -webkit-fill-available;
+    height: fill-available; /* Para compatibilidade com outros navegadores */
+  }
 
   @media (min-width: 1024px) {
     .lg\:bg-uber {

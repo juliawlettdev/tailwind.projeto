@@ -26,6 +26,10 @@
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -230,9 +234,6 @@
   .h-fit {
     height: fit-content;
   }
-  .h-full {
-    height: 100%;
-  }
   .max-h-1\/2 {
     max-height: calc(1/2 * 100%);
   }
@@ -281,6 +282,9 @@
   .items-center {
     align-items: center;
   }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -295,9 +299,6 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
-  }
-  .gap-2\.5 {
-    gap: calc(var(--spacing) * 2.5);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -407,17 +408,11 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .py-3 {
-    padding-block: calc(var(--spacing) * 3);
-  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
@@ -439,17 +434,21 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
-  }
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -578,35 +577,34 @@
       border-bottom-color: var(--color-blue-500);
     }
   }
-  .max-md\:m-auto {
-    @media (width < 48rem) {
-      margin: auto;
+  .max-lg\:w-full {
+    @media (width < 64rem) {
+      width: 100%;
     }
   }
-  .max-md\:px-2\.5 {
-    @media (width < 48rem) {
-      padding-inline: calc(var(--spacing) * 2.5);
+  .max-lg\:flex-col {
+    @media (width < 64rem) {
+      flex-direction: column;
     }
   }
-  .max-md\:px-3 {
-    @media (width < 48rem) {
-      padding-inline: calc(var(--spacing) * 3);
+  .max-lg\:px-7 {
+    @media (width < 64rem) {
+      padding-inline: calc(var(--spacing) * 7);
     }
   }
-  .max-md\:px-5 {
-    @media (width < 48rem) {
-      padding-inline: calc(var(--spacing) * 5);
+  .max-lg\:py-10 {
+    @media (width < 64rem) {
+      padding-block: calc(var(--spacing) * 10);
     }
   }
-  .max-md\:pt-5 {
-    @media (width < 48rem) {
+  .max-lg\:pt-5 {
+    @media (width < 64rem) {
       padding-top: calc(var(--spacing) * 5);
     }
   }
-  .max-md\:text-2xl {
+  .max-md\:m-auto {
     @media (width < 48rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
+      margin: auto;
     }
   }
   .max-sm\:bg-white {
@@ -624,14 +622,16 @@
       max-width: calc(1/4 * 100%);
     }
   }
-  .md\:max-w-1\/2 {
-    @media (width >= 48rem) {
-      max-width: calc(1/2 * 100%);
+  .sm\:text-3xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
-  .md\:py-20 {
+  .md\:text-4xl {
     @media (width >= 48rem) {
-      padding-block: calc(var(--spacing) * 20);
+      font-size: var(--text-4xl);
+      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
   .lg\:flex {
@@ -649,14 +649,19 @@
       flex: 1;
     }
   }
-  .lg\:gap-2\.5 {
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 2.5);
-    }
-  }
   .lg\:gap-5 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:px-2\.5 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 2.5);
+    }
+  }
+  .lg\:px-4 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 4);
     }
   }
   .lg\:py-20 {
@@ -682,6 +687,10 @@
     background-image: var(--bg-cityBg);
     background-size: cover;
     background-position: center;
+  }
+  .h-fill-available {
+    height: -webkit-fill-available;
+    height: fill-available;
   }
   @media (min-width: 1024px) {
     .lg\:bg-uber {
